@@ -115,14 +115,8 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-dialog v-model="dialog" max-width="640px">
-      <v-card>
-        <youtube
-          :video-id="videoId"
-          @ready="ready"
-          @playing="playing"
-        ></youtube>
-      </v-card>
+    <v-dialog v-model="dialog" max-width="500px">  
+        <iframe src="http://player.vimeo.com/video/525764495" width="500" height="281" frameborder=""></iframe>      
     </v-dialog>
     <div class="svg-border-waves">
       <img src="~@/assets/img/wave2.svg" />
@@ -185,17 +179,17 @@ export default {
   stroke: white;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
-  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0.3;
 }
 
 .playBut {
   /*  border: 1px solid red;*/
   display: inline-block;
-  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
   .triangle {
-    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
     stroke-dasharray: 240;
     stroke-dashoffset: 480;
     stroke: white;
